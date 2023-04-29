@@ -1,9 +1,28 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import banner from "../../public/images/phones/phone1.png";
 import cardPhone from "../../public/images/phones/cardPhone.jpg";
+import {
+  useGetPhoneByIdQuery,
+  useGetPhonesQuery,
+} from "@/redux/services/phoneApi";
 
 const Hero = () => {
+  const { isLoading, isFetching, data, error } = useGetPhonesQuery(null);
+
+  if (isLoading) {
+    return <div>loading</div>;
+  }
+  if (isFetching) {
+    return <div>fetching</div>;
+  }
+  if (error) {
+    console.log(error, "error");
+    return <div>loading</div>;
+  }
+  console.log(data, "data");
+
   return (
     <>
       <section
@@ -17,9 +36,7 @@ const Hero = () => {
               <Image src={banner} alt="banner" className="h-full w-full" />
             </div>
             <div>
-              <h2 className="font-sans text-5xl font-bold">
-                top smart phones 
-              </h2>
+              <h2 className="font-sans text-5xl font-bold">top smart phones</h2>
               <h2 className="font-sans text-5xl font-bold">2022</h2>
               <button className="text-red-400 font-sans hover:underline">
                 Read more
@@ -29,19 +46,12 @@ const Hero = () => {
           {/* mobile cards */}
           <div className="flex item-center gap-5">
             <div className="max-w-sm w-[20%] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-              <div className="w-full h-[35vh]">  
-                <Image className="rounded-t-xl w-full h-full" src={cardPhone} alt="mobile" />
-              </div>
-              <div className="bg-[#252728] px-2 pb-10 pt-1 ">
-                <h4 className="font-sans font-bold text-white">
-                  Upcomming smartphones
-                </h4>
-                <button className="text-gray-500">Read more</button>
-              </div>
-            </div>
-             <div className="max-w-sm w-[20%] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-              <div className="w-full h-[35vh]">  
-                <Image className="rounded-t-xl w-full h-full" src={cardPhone} alt="mobile" />
+              <div className="w-full h-[35vh]">
+                <Image
+                  className="rounded-t-xl w-full h-full"
+                  src={cardPhone}
+                  alt="mobile"
+                />
               </div>
               <div className="bg-[#252728] px-2 pb-10 pt-1 ">
                 <h4 className="font-sans font-bold text-white">
@@ -51,8 +61,27 @@ const Hero = () => {
               </div>
             </div>
             <div className="max-w-sm w-[20%] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-              <div className="w-full h-[35vh]">  
-                <Image className="rounded-t-xl w-full h-full" src={cardPhone} alt="mobile" />
+              <div className="w-full h-[35vh]">
+                <Image
+                  className="rounded-t-xl w-full h-full"
+                  src={cardPhone}
+                  alt="mobile"
+                />
+              </div>
+              <div className="bg-[#252728] px-2 pb-10 pt-1 ">
+                <h4 className="font-sans font-bold text-white">
+                  Upcomming smartphones
+                </h4>
+                <button className="text-gray-500">Read more</button>
+              </div>
+            </div>
+            <div className="max-w-sm w-[20%] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+              <div className="w-full h-[35vh]">
+                <Image
+                  className="rounded-t-xl w-full h-full"
+                  src={cardPhone}
+                  alt="mobile"
+                />
               </div>
               <div className="bg-[#252728] px-2 pb-10 pt-1 ">
                 <h4 className="font-sans font-bold text-white">
@@ -62,13 +91,17 @@ const Hero = () => {
               </div>
             </div>
             <div className="max-w-sm w-[40%]   rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-              <div className="w-[100%] h-[35vh]">  
-                <Image className="rounded-t-xl w-full h-full" src={cardPhone} alt="mobile" />
+              <div className="w-[100%] h-[35vh]">
+                <Image
+                  className="rounded-t-xl w-full h-full"
+                  src={cardPhone}
+                  alt="mobile"
+                />
               </div>
               <div className="bg-[#252728] px-2 pb-10 pt-1 ">
                 <h4 className="font-sans font-bold text-white">
                   Upcomming smartphones
-                </h4> 
+                </h4>
                 <button className="text-gray-500">Read more</button>
               </div>
             </div>
@@ -76,8 +109,12 @@ const Hero = () => {
           {/* mobile cards */}
           <div className="flex item-center my-20 gap-5">
             <div className="max-w-sm w-[25%] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-              <div className="w-full h-[35vh]">  
-                <Image className="rounded-t-xl w-full h-full" src={cardPhone} alt="mobile" />
+              <div className="w-full h-[35vh]">
+                <Image
+                  className="rounded-t-xl w-full h-full"
+                  src={cardPhone}
+                  alt="mobile"
+                />
               </div>
               <div className="bg-[#252728] px-2 pb-10 pt-1 ">
                 <h4 className="font-sans font-bold text-white">
@@ -86,9 +123,13 @@ const Hero = () => {
                 <button className="text-gray-500">Read more</button>
               </div>
             </div>
-             <div className="max-w-sm w-[25%] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-              <div className="w-full h-[35vh]">  
-                <Image className="rounded-t-xl w-full h-full" src={cardPhone} alt="mobile" />
+            <div className="max-w-sm w-[25%] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+              <div className="w-full h-[35vh]">
+                <Image
+                  className="rounded-t-xl w-full h-full"
+                  src={cardPhone}
+                  alt="mobile"
+                />
               </div>
               <div className="bg-[#252728] px-2 pb-10 pt-1 ">
                 <h4 className="font-sans font-bold text-white">
@@ -98,8 +139,12 @@ const Hero = () => {
               </div>
             </div>
             <div className="max-w-sm w-[25%]  rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-              <div className="w-full h-[35vh]">  
-                <Image className="rounded-t-xl w-full h-full" src={cardPhone} alt="mobile" />
+              <div className="w-full h-[35vh]">
+                <Image
+                  className="rounded-t-xl w-full h-full"
+                  src={cardPhone}
+                  alt="mobile"
+                />
               </div>
               <div className="bg-[#252728] px-2 pb-10 pt-1 ">
                 <h4 className="font-sans font-bold text-white">
@@ -109,8 +154,12 @@ const Hero = () => {
               </div>
             </div>
             <div className="max-w-sm w-[25%]  rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-              <div className="w-full h-[35vh]">  
-                <Image className="rounded-t-xl w-full h-full" src={cardPhone} alt="mobile" />
+              <div className="w-full h-[35vh]">
+                <Image
+                  className="rounded-t-xl w-full h-full"
+                  src={cardPhone}
+                  alt="mobile"
+                />
               </div>
               <div className="bg-[#252728] px-2 pb-10 pt-1 ">
                 <h4 className="font-sans font-bold text-white">
