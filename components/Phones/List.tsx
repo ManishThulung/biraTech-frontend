@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Image from "next/image";
 import banner from "../../public/images/phones/phone1.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
