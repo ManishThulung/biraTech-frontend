@@ -7,6 +7,7 @@ specifiers:
   '@types/node': ^18.15.11
   '@types/react': ^18.0.34
   autoprefixer: ^10.4.13
+  dotenv: ^16.0.3
   eslint: 8.33.0
   eslint-config-next: 13.1.6
   next: 13.1.6
@@ -19,6 +20,7 @@ specifiers:
   react-icons: ^4.8.0
   react-modal-video: ^2.0.0
   react-redux: ^8.0.5
+  redux-logger: ^3.0.6
   tailwindcss: ^3.3.1
   typescript: ^5.0.4
 
@@ -26,6 +28,7 @@ dependencies:
   '@next/font': 13.1.6
   '@reduxjs/toolkit': 1.9.5_k4ae6lp43ej6mezo3ztvx6pykq
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.2
+  dotenv: 16.0.3
   eslint: 8.33.0
   eslint-config-next: 13.1.6_ybz3ipafurhkthqz4xjn5nn4be
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
@@ -35,6 +38,7 @@ dependencies:
   react-icons: 4.8.0_react@18.2.0
   react-modal-video: 2.0.0_biqbaboplfbrettd7655fr4n2y
   react-redux: 8.0.5_cis5wmpl6sllca25ejrqakjpau
+  redux-logger: 3.0.6
 
 devDependencies:
   '@types/node': 18.16.3
@@ -1834,6 +1838,10 @@ packages:
       mimic-response: 2.1.0
     dev: false
 
+  /deep-diff/0.3.8:
+    resolution: {integrity: sha512-yVn6RZmHiGnxRKR9sJb3iVV2XTF1Ghh2DiWRZ3dMnGc43yUdWWF/kX6lQyk3+P84iprfWKU/8zFTrlkvtFm1ug==}
+    dev: false
+
   /deep-equal/2.2.1:
     resolution: {integrity: sha512-lKdkdV6EOGoVn65XaOsPdH4rMxTZOnmFyuIkMjM1i5HHCbfjC97dawgTAy0deYNfuqUqW+Q5VrVaQYtUpSd6yQ==}
     dependencies:
@@ -2021,6 +2029,11 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       is-obj: 2.0.0
+    dev: false
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /duplexer2/0.1.4:
@@ -5596,6 +5609,12 @@ packages:
     dependencies:
       indent-string: 4.0.0
       strip-indent: 3.0.0
+    dev: false
+
+  /redux-logger/3.0.6:
+    resolution: {integrity: sha512-JoCIok7bg/XpqA1JqCqXFypuqBbQzGQySrhFzewB7ThcnysTO30l4VCst86AuB9T9tuT03MAA56Jw2PNhRSNCg==}
+    dependencies:
+      deep-diff: 0.3.8
     dev: false
 
   /redux-thunk/2.4.2_redux@4.2.1:

@@ -7,21 +7,29 @@ import {
   useGetPhoneByIdQuery,
   useGetPhonesQuery,
 } from "@/redux/services/phoneApi";
+import Loading from "@/app/loading";
+import { useGetUsersQuery } from "@/redux/services/userApi";
 
 const Hero = () => {
-  const { isLoading, isFetching, data, error } = useGetPhonesQuery(null);
+  const { isLoading, data, error } = useGetPhonesQuery(null);
+  const {
+    isLoading: isLoading1,
+    data: data1,
+    error: error1,
+  } = useGetUsersQuery(null);
 
   if (isLoading) {
-    return <div>loading</div>;
+    return <Loading />;
   }
-  if (isFetching) {
-    return <div>fetching</div>;
+  if (isLoading1) {
+    return <div>user loading.....</div>;
   }
   if (error) {
     console.log(error, "error");
     return <div>loading</div>;
   }
   console.log(data, "data");
+  console.log(data1, "user data");
 
   return (
     <>

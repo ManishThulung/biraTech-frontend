@@ -5,7 +5,7 @@ export const phoneApi = createApi({
   reducerPath: "phoneApi",
   refetchOnFocus: true,
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4000/api/",
+    baseUrl: process.env.NEXT_PUBLIC_BASE_URI,
   }),
   endpoints: (builder) => ({
     getPhones: builder.query<Phone[], null>({
