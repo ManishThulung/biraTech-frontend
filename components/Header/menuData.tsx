@@ -13,6 +13,12 @@ const menuData: Menu[] = [
     path: "/phones",
     newTab: false,
   },
+  {
+    id: 1,
+    title: "Morephones",
+    path: "/morephones",
+    newTab: false,
+  },
   // {
   //   id: 4,
   //   title: "Phones",
