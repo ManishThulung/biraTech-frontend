@@ -10,8 +10,8 @@ import { MdLocationPin } from "react-icons/md";
 const Footer = () => {
   return (
     <>
-      <footer  data-wow-delay=".1s">
-        <div className="bg-[#0f2027]">
+      <footer>
+        <div className="bg-[#0f2027] xl:mt-20">
           <div className="container pt-4 pb-8">
             <div className="flex justify-center">
               <svg
@@ -45,8 +45,8 @@ const Footer = () => {
               </svg>
             </div>
             <hr className="dark:bg-gray-700 mx-auto mb-8 h-[2px]  w-full rounded border-0 bg-[#dddfe0]" />
-            <div className="flex w-full justify-between">
-              <div className="w-[25%]">
+            <div className="flex w-full xl:flex-row gap-8 xl:gap-0 flex-col xl:justify-between">
+              <div className="xl:w-[25%]">
                 <h3 className="text-md  mb-1 font-sans font-bold text-white">Reach us</h3>
                 <ul className="mt-2 flex flex-col gap-3 text-sm text-white">
                   <li className="flex font-sans items-center gap-1">
@@ -71,7 +71,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="w-[25%]">
+              <div className="xl:w-[25%]">
                 <h3 className="text-md font-sans mb-1 font-bold text-white">Company</h3>
                 <ul className="flex flex-col font-sans gap-3 text-sm text-white">
                   <li>About</li>
@@ -79,7 +79,7 @@ const Footer = () => {
                   <li>Blogs</li>
                 </ul>
               </div>
-              <div className="w-[25%]">
+              <div className="xl:w-[25%]">
                 <h3 className="text-md mb-1 font-sans font-bold text-white">Legal</h3>
                 <ul className="flex font-sans flex-col gap-3 text-sm text-white">
                   <li>Privacy Policy</li>
@@ -88,7 +88,7 @@ const Footer = () => {
                   <li>Refund Policy</li>
                 </ul>
               </div>
-              <div className="w-[25%]">
+              <div className="xl:w-[25%]">
                 <h3 className="text-md font-sans mb-1 font-bold text-white">
                   Quick links
                 </h3>
@@ -98,7 +98,7 @@ const Footer = () => {
                   <li>Forum</li>
                 </ul>
               </div>
-              <div className="w-[25%] rounded-md bg-[#131313] p-4">
+              <div className="xl:w-[25%] rounded-md bg-[#131313] p-4">
                 <h4 className="text-lg font-sans font-bold text-white">
                   Join Our Newsletter
                 </h4>
