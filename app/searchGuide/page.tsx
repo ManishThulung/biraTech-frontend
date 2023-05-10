@@ -353,7 +353,7 @@ const page = () => {
               {phones.map((phone) => {
                 return (
                   <>
-                    <div className="w-[120px] h-[110px]">
+                    <div className="w-[180px] h-[170px]">
                       <Image
                         src={phone.image}
                         alt="My Image"

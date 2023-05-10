@@ -60,20 +60,20 @@ const menuData: Menu[] = [
   {
     id: 33,
     title: "Comparison",
-    path: "/blog",
+    path: "/comparision",
     newTab: false,
   },
-  // {
-  //   id: 3,
-  //   title: "About Us",
-  //   path: "/contact",
-  //   newTab: false,
-  // },
-  // {
-  //   id: 3,
-  //   title: "Contact Us",
-  //   path: "/contact",
-  //   newTab: false,
-  // },
+  {
+    id: 3,
+    title: "About Us",
+    path: "/contact",
+    newTab: false,
+  },
+  {
+    id: 3,
+    title: "Contact Us",
+    path: "/contact",
+    newTab: false,
+  },
 ];
 export default menuData;
