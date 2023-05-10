@@ -8,17 +8,17 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
-    id: 1,
+    id: 2,
     title: "Phones",
     path: "/phones",
     newTab: false,
   },
-  {
-    id: 1,
-    title: "Morephones",
-    path: "/morephones",
-    newTab: false,
-  },
+  // {
+  //   id: 1,
+  //   title: "Morephones",
+  //   path: "/morephones",
+  //   newTab: false,
+  // },
   // {
   //   id: 4,
   //   title: "Phones",
@@ -54,7 +54,7 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "Search Guide",
-    path: "/about",
+    path: "/searchGuide",
     newTab: false,
   },
   {
@@ -63,17 +63,17 @@ const menuData: Menu[] = [
     path: "/blog",
     newTab: false,
   },
-  {
-    id: 3,
-    title: "About Us",
-    path: "/contact",
-    newTab: false,
-  },
-  {
-    id: 3,
-    title: "Contact Us",
-    path: "/contact",
-    newTab: false,
-  },
+  // {
+  //   id: 3,
+  //   title: "About Us",
+  //   path: "/contact",
+  //   newTab: false,
+  // },
+  // {
+  //   id: 3,
+  //   title: "Contact Us",
+  //   path: "/contact",
+  //   newTab: false,
+  // },
 ];
 export default menuData;

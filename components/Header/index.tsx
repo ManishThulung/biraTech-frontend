@@ -44,19 +44,14 @@ const Header = () => {
             ? "!fixed !z-[9999] !bg-white !bg-opacity-80  shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
             : "absolute"
         }`}
-      > 
+      >
         <div
           className="container flex items-center  justify-between
 
         "
         >
           <div className="">
-            <Link
-              href="/"
-              className={` block w-full ${
-                sticky ? "" : ""
-              } `}
-            >
+            <Link href="/" className={` block w-full ${sticky ? "" : ""} `}>
               <svg
                 width={90}
                 height={45}
