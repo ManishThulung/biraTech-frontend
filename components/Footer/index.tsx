@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { SiFacebook } from "react-icons/si";
 import { RiInstagramFill } from "react-icons/ri";
 import { BsTwitter } from "react-icons/bs";
