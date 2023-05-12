@@ -5,7 +5,7 @@ const List = () => {
   return (
     <div className="container ">
       <div className="">
-        <Accordion title={"Apple"} />
+        {/* <Accordion title={"Apple"} /> */}
       </div>
       <div className="py-10">
         <Accordion title={"Apple"} />
