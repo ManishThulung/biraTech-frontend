@@ -39,24 +39,18 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header top-0 left-0 pt-3    z-40 xl:mt-[-25px]  w-full items-center bg-transparent ${
+        className={`header top-0 left-0 pt-3  !bg-white   z-40 xl:mt-[-25px]  w-full items-center bg-transparent ${
           sticky
             ? "!fixed !z-[9999] !bg-white !bg-opacity-80  shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
             : "absolute"
         }`}
-      > 
+      >
         <div
           className="container flex items-center  justify-between
-
         "
         >
           <div className="">
-            <Link
-              href="/"
-              className={` block w-full ${
-                sticky ? "" : ""
-              } `}
-            >
+            <Link href="/" className={` block w-full ${sticky ? "" : ""} `}>
               <svg
                 width={90}
                 height={45}
@@ -166,16 +160,16 @@ const Header = () => {
                     </li>
                   ))}
                   <li className="group relative my-[2px]">
-                    <Link
-                      href="/signin"
+                    <span
+                      // href="/search"
                       className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                     >
                       <BiSearchAlt2 size={20} />
-                    </Link>
+                    </span>
                   </li>
                   <li className="group relative my-[2px]">
                     <Link
-                      href="/signin"
+                      href="/auth"
                       className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                     >
                       <HiOutlineUserCircle size={20} />

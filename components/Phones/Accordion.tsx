@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import banner from "../../public/images/phones/phone1.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Link from "next/link";
 
 const Accordion = ({ title}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,10 +62,13 @@ const Accordion = ({ title}) => {
             </div>
           </div>
           <div className="flex cursor-pointer flex-col justify-center items-center">
-            <div>
+            <Link href="/morephones">
+            <div className="px-2">
               <AiOutlineArrowRight size={28} />
             </div>
             <div className="text-xs">See more</div>
+            </Link>
+           
           </div>
         </div>}
       </div>

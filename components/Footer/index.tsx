@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { SiFacebook } from "react-icons/si";
 import { RiInstagramFill } from "react-icons/ri";
 import { BsTwitter } from "react-icons/bs";
@@ -11,7 +9,7 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="bg-[#0f2027] xl:mt-20">
+        <div className="bg-[#0f2027] ">
           <div className="container pt-4 pb-8">
             <div className="flex justify-center">
               <svg
